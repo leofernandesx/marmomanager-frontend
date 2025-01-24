@@ -1,0 +1,30 @@
+<!-- src/app/modules/clientes/listar-clientes/listar-clientes.component.html -->
+<div class="container mt-4">
+    <h2>Lista de Clientes</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nome</th>
+          <th>CPF</th>
+          <th>Telefone</th>
+          <th>Endereço</th>
+          <th>Email</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of clientes">
+          <td>{{ cliente.id }}</td>
+          <td>{{ cliente.nome }}</td>
+          <td>{{ cliente.telefone }}</td>
+          <td>{{ cliente.endereco }}</td>
+          <td>{{ cliente.email }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm">Editar</button>
+            <button class="btn btn-danger btn-sm">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
