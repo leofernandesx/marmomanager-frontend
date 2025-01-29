@@ -1,1 +1,32 @@
 <p>listar-orcamentoitens works!</p>
+
+<div class="container mt-4">
+    <h2>Lista de Orçamento de itens</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Orçamento</th>
+          <th>Produtos</th>
+          <th>Quantidade</th>
+          <th>Preço</th>
+          <th>Preço-Unitario</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let orcamentoitem of orcamentoitens">
+          <td>{{ orcamentoitem.id }}</td>
+          <td>{{ orcamentoitem.orcamento_id }}</td>
+          <td>{{ orcamentoitem.produto_id}}</td>
+          <td>{{ orcamentoitem.quantidade }}</td>
+          <td>{{ orcamentoitem.preco }}</td>
+          <td>{{ orcamentoitem.preco_unitario }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm">Editar</button>
+            <button class="btn btn-danger btn-sm">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

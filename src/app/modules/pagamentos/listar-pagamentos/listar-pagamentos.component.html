@@ -1,1 +1,38 @@
 <p>listar-pagamentos works!</p>
+
+<div class="container mt-4">
+    <h2>Lista Pagamentos</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Pedidos</th>
+          <th>Valor</th>
+          <th>Data Pagamento</th>
+          <th>Metodo Pagamento</th>
+          <th>Criado em</th>
+          <th>Status</th>
+          <th>Valor Pago</th>
+          <th>Forma de Pagamento</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pagamento of pagamentos">
+          <td>{{ pagamento.id }}</td>
+          <td>{{ pagamento.pedido_id }}</td>
+          <td>{{ pagamento.valor}}</td>
+          <td>{{ pagamento.data_pagamento }}</td>
+          <td>{{ pagamento.metodo_pagamento }}</td>
+          <td>{{ pagamento.criado_em }}</td>
+          <td>{{ pagamento.status }}</td>
+          <td>{{ pagamento.valor_pago }}</td>
+          <td>{{ pagamento.forma_pagamento }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm">Editar</button>
+            <button class="btn btn-danger btn-sm">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

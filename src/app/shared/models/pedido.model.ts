@@ -4,6 +4,6 @@ export interface Pedido {
     status: String;
     data_prevista_entrega: string;
     criado_em: string;
-    valor_total: string;
+    valor_total: number;
     cliente_id: number;
   }

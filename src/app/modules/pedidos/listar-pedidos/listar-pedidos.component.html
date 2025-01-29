@@ -1,1 +1,35 @@
 <p>listar-pedidos works!</p>
+
+<div class="container mt-4">
+    <h2>Lista de Pedidos</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Orçamento</th>
+          <th>Status</th>
+          <th>Data Prevista de Entrega</th>
+          <th>Criado em</th>
+          <th>Valor Total</th>
+          <th>Cliente</th>
+          <th>Data</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pedido of pedidos">
+          <td>{{ pedido.id }}</td>
+          <td>{{ pedido.orcamento_id }}</td>
+          <td>{{ pedido.status }}</td>
+          <td>{{ pedido.data_prevista_entrega }}</td>
+          <td>{{ pedido.criado_em }}</td>
+          <td>{{ pedido.valor_total }}</td>
+          <td>{{ pedido.cliente_id }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm">Editar</button>
+            <button class="btn btn-danger btn-sm">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

@@ -1,1 +1,28 @@
 <p>listar-orcamentos works!</p>
+
+<div class="container mt-4">
+    <h2>Lista de Orçamentos</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Cliente</th>
+          <th>Total</th>
+          <th>Criado em</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let orcamento of orcamentos">
+          <td>{{ orcamento.id }}</td>
+          <td>{{ orcamento.cliente_id }}</td>
+          <td>{{ orcamento.total }}</td>
+          <td>{{ orcamento.criado_em }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm">Editar</button>
+            <button class="btn btn-danger btn-sm">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

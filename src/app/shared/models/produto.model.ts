@@ -5,5 +5,5 @@ export interface Produto {
     precom2: number;
     estoque: number;
     criado_em: string;
-    quantidade_estoque: number;
+    /*quantidade_estoque: number;*/
   }

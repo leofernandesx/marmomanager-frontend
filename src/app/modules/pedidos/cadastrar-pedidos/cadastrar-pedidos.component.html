@@ -1,1 +1,44 @@
-<p>cadastrar-pedidos works!</p>
+<div class="container mt-4">
+    <h2>Cadastrar Pedido</h2>
+    <form (ngSubmit)="salvarPedido()">
+      <div class="mb-3">
+        <label for="orcamento_id" class="form-label">Orçamento</label>
+        <input type="number" id="orcamento_id" class="form-control" [(ngModel)]="pedido.orcamento_id" name="orcamento_id" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="status" class="form-label">Status</label>
+        <select id="status" class="form-control" [(ngModel)]="pedido.status" name="status" required>
+          <option value="">Selecione</option>
+          <option value="Pendente">Pendente</option>
+          <option value="Em andamento">Em andamento</option>
+          <option value="Concluído">Concluído</option>
+          <option value="Cancelado">Cancelado</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="data_prevista_entrega" class="form-label">Data prevista de entrega</label>
+        <input type="date" id="data_prevista_entrega" class="form-control" [(ngModel)]="pedido.data_prevista_entrega" name="data_prevista_entrega" required />
+      </div>
+      
+
+      <div class="mb-3">
+        <label for="criado_em" class="form-label">Criado Em</label>
+        <input type="date" id="data_pagamento" class="form-control" [(ngModel)]="pedido.criado_em" name="criado_em" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="valor_total" class="form-label">Valor Total</label>
+        <input type="number" step="0.01" id="valor_total" class="form-control" [(ngModel)]="pedido.valor_total" name="valor_total" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="cliente_id" class="form-label">Cliente</label>
+        <input type="number" id="cliente_id" class="form-control" [(ngModel)]="pedido.cliente_id" name="cliente_id" required />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Salvar</button>
+    </form>
+  </div>
+  

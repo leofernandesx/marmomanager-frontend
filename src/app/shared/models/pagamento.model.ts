@@ -6,6 +6,6 @@ export interface Pagamento {
     valor_pago: number;
     pedido_id: number;
     valor: number;
-    metodo_pagamento: string;
+    /*metodo_pagamento: string;*/
     criado_em: string;
   }

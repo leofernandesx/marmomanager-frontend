@@ -1,1 +1,31 @@
 <p>listar-produtos works!</p>
+
+<div class="container mt-4">
+    <h2>Lista de Produtos</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nome</th>
+          <th>Tipo</th>
+          <th>Preço por Metro Quadrado</th>
+          <th>Estoque</th>
+          <th>Criado em</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let produto of produtos">
+          <td>{{ produto.id }}</td>
+          <td>{{ produto.tipo }}</td>
+          <td>{{ produto.precom2 }}</td>
+          <td>{{ produto.estoque }}</td>
+          <td>{{ produto.criado_em }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm">Editar</button>
+            <button class="btn btn-danger btn-sm">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

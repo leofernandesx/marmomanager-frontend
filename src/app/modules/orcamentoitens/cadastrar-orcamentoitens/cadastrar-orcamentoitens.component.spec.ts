@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CadastrarOrcamentoitensComponent } from './cadastrar-orcamentoitens.component';
+import { CadastrarOrcamentoItensComponent } from './cadastrar-orcamentoitens.component';
 
 describe('CadastrarOrcamentoitensComponent', () => {
-  let component: CadastrarOrcamentoitensComponent;
-  let fixture: ComponentFixture<CadastrarOrcamentoitensComponent>;
+  let component: CadastrarOrcamentoItensComponent;
+  let fixture: ComponentFixture<CadastrarOrcamentoItensComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CadastrarOrcamentoitensComponent]
+      imports: [CadastrarOrcamentoItensComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CadastrarOrcamentoitensComponent);
+    fixture = TestBed.createComponent(CadastrarOrcamentoItensComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

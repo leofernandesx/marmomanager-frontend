@@ -1,1 +1,21 @@
-<p>cadastrar-orcamentos works!</p>
+<div class="container mt-4">
+    <h2>Cadastrar Orçamento</h2>
+    <form (ngSubmit)="salvarOrcamento()">
+      <div class="mb-3">
+        <label for="cliente_id" class="form-label">Cliente</label>
+        <input type="number" id="cliente_id" class="form-control" [(ngModel)]="orcamento.cliente_id" name="cliente_id" required />
+      </div>
+      
+      <div class="mb-3">
+        <label for="total" class="form-label">Total</label>
+        <input type="number" step="0.01" id="total" class="form-control" [(ngModel)]="orcamento.total" name="total" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="criado_em" class="form-label">Criado em</label>
+        <input type="text" id="data" class="form-control" [(ngModel)]="orcamento.criado_em" name="criado_em" required />
+      </div>
+      <button type="submit" class="btn btn-primary">Salvar</button>
+    </form>
+  </div>
+  

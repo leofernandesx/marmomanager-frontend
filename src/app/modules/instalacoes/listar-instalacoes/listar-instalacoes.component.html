@@ -1,1 +1,29 @@
 <p>listar-instalacoes works!</p>
+<!-- src/app/modules/clientes/listar-clientes/listar-clientes.component.html -->
+<div class="container mt-4">
+    <h2>Lista de Instalações</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Pedido</th>
+          <th>Data da Instalção</th>
+          <th>Status</th>
+          <th>Criado em:</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let instalacao of instalacoes">
+          <td>{{ instalacao.id }}</td>
+          <td>{{ instalacao.pedido_id }}</td>
+          <td>{{ instalacao.data_instalacao }}</td>
+          <td>{{ instalacao.status }}</td>
+          <td>{{ instalacao.criado_em }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm">Editar</button>
+            <button class="btn btn-danger btn-sm">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
